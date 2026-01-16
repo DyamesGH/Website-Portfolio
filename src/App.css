@@ -1,26 +1,19 @@
+html,
+body,
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 html,
 body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
+  width: 100%;
 }
 
-/* Fix Bootstrap row overflow */
-.row {
-  margin-left: 0;
-  margin-right: 0;
+section {
+  width: 100%;
 }
 
 /* Prevent container-fluid from exceeding viewport */

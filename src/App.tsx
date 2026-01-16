@@ -2,7 +2,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 export default function Portfolio() {
   return (
-    <div className="bg-dark text-light">
+    <div className="bg-dark text-light w-100">
       {/* Hero Section */}
       <section className="py-5 bg-dark">
         <Container className="text-center">
