@@ -2,10 +2,10 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 export default function Portfolio() {
   return (
-    <div className="bg-light text-dark">
+    <div className="bg-dark text-light">
       {/* Hero Section */}
-      <section className="d-flex align-items-center justify-content-center text-center py-5 bg-white">
-        <Container>
+      <section className="py-5 bg-dark">
+        <Container className="text-center">
           <h1 className="display-4 fw-bold mb-4">Hi, I’m James 👋</h1>
           <p className="lead mx-auto mb-4" style={{ maxWidth: "700px" }}>
             A fresh Computer Science graduate passionate about software
@@ -16,7 +16,7 @@ export default function Portfolio() {
             <Button href="#projects" variant="primary">
               View Projects
             </Button>
-            <Button href="#contact" variant="outline-primary">
+            <Button href="#contact" variant="outline-light">
               Contact Me
             </Button>
           </div>
@@ -24,12 +24,13 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-5 bg-light" id="skills">
+      <section className="py-5 bg-secondary" id="skills">
         <Container>
           <h2 className="text-center fw-semibold mb-5">Skills</h2>
-          <Row>
-            <Col md={4} className="mb-4">
-              <Card>
+
+          <Row className="justify-content-center g-4">
+            <Col md={4}>
+              <Card bg="dark" text="light" className="h-100 text-center shadow">
                 <Card.Body>
                   <Card.Title>Programming</Card.Title>
                   <Card.Text>
@@ -39,8 +40,8 @@ export default function Portfolio() {
               </Card>
             </Col>
 
-            <Col md={4} className="mb-4">
-              <Card>
+            <Col md={4}>
+              <Card bg="dark" text="light" className="h-100 text-center shadow">
                 <Card.Body>
                   <Card.Title>Frameworks & Tools</Card.Title>
                   <Card.Text>
@@ -50,8 +51,8 @@ export default function Portfolio() {
               </Card>
             </Col>
 
-            <Col md={4} className="mb-4">
-              <Card>
+            <Col md={4}>
+              <Card bg="dark" text="light" className="h-100 text-center shadow">
                 <Card.Body>
                   <Card.Title>Concepts</Card.Title>
                   <Card.Text>
@@ -65,12 +66,13 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-5 bg-white" id="projects">
+      <section className="py-5 bg-dark" id="projects">
         <Container>
           <h2 className="text-center fw-semibold mb-5">Projects</h2>
-          <Row>
-            <Col md={6} className="mb-4">
-              <Card>
+
+          <Row className="justify-content-center g-4">
+            <Col md={6}>
+              <Card bg="secondary" text="light" className="h-100 shadow">
                 <Card.Body>
                   <Card.Title>Game Systems Architecture</Card.Title>
                   <Card.Text className="mb-3">
@@ -79,7 +81,7 @@ export default function Portfolio() {
                     experiments using ECS.
                   </Card.Text>
                   <Button
-                    variant="outline-primary"
+                    variant="outline-light"
                     href="https://github.com/your-username/project-1"
                     target="_blank"
                   >
@@ -89,8 +91,8 @@ export default function Portfolio() {
               </Card>
             </Col>
 
-            <Col md={6} className="mb-4">
-              <Card>
+            <Col md={6}>
+              <Card bg="secondary" text="light" className="h-100 shadow">
                 <Card.Body>
                   <Card.Title>Portfolio Website</Card.Title>
                   <Card.Text className="mb-3">
@@ -98,7 +100,7 @@ export default function Portfolio() {
                     TypeScript, and Bootstrap.
                   </Card.Text>
                   <Button
-                    variant="outline-primary"
+                    variant="outline-light"
                     href="https://github.com/your-username/project-2"
                     target="_blank"
                   >
@@ -112,22 +114,33 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-5 bg-light text-center" id="contact">
+      <section className="py-5 bg-secondary text-center" id="contact">
         <Container>
           <h2 className="fw-semibold mb-4">Contact</h2>
           <p className="mb-4">
             I’m open to junior developer roles, internships, and collaborations.
           </p>
           <p className="mb-2">
-            📧 <a href="mailto:your.email@example.com">your.email@example.com</a>
+            📧{" "}
+            <a className="text-light" href="mailto:your.email@example.com">
+              james.meneses112603@gmail.Computer
+            </a>
           </p>
           <p>
             💻{" "}
-            <a href="https://github.com/your-username" target="_blank">
+            <a
+              className="text-light"
+              href="https://github.com/DyamesGH"
+              target="_blank"
+            >
               GitHub
             </a>{" "}
             |{" "}
-            <a href="https://linkedin.com/in/your-profile" target="_blank">
+            <a
+              className="text-light"
+              href="https://linkedin.com/in/james-meneses03"
+              target="_blank"
+            >
               LinkedIn
             </a>
           </p>
@@ -135,7 +148,7 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-3 bg-dark text-light">
+      <footer className="text-center py-3 bg-black text-secondary">
         © {new Date().getFullYear()} James Meneses. All rights reserved.
       </footer>
     </div>
