@@ -1,10 +1,23 @@
 import { Container, Card, Badge, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { projects } from "../data/projects";
 
 export default function Projects() {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-dark text-light min-vh-100 py-5">
       <Container>
+
+        {/* Back Button */}
+        <Button
+          variant="outline-light"
+          className="mb-4"
+          onClick={() => navigate("/")}
+        >
+          ← Back to Home
+        </Button>
+
         <h1 className="text-center mb-5">My Projects</h1>
 
         {projects.map((project, index) => (
@@ -15,11 +28,9 @@ export default function Projects() {
             className="mb-4 shadow"
           >
             <Card.Body>
-              <Card.Title className="fs-4">{project.title}</Card.Title>
+              <Card.Title>{project.title}</Card.Title>
 
-              <Card.Text className="mt-2">
-                {project.description}
-              </Card.Text>
+              <Card.Text>{project.description}</Card.Text>
 
               <div className="mb-3">
                 {project.technologies.map((tech, i) => (
