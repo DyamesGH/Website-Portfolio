@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Portfolio() {
   return (
@@ -7,24 +8,27 @@ export default function Portfolio() {
       <section className="py-5 bg-dark">
         <Container className="text-center">
           <h1 className="display-4 fw-bold mb-4">Hi, I’m James 👋</h1>
+
           <p className="lead mx-auto mb-4" style={{ maxWidth: "700px" }}>
             A fresh Computer Science graduate passionate about software
             development, problem-solving, and building impactful digital
             experiences.
           </p>
+
           <div className="d-flex justify-content-center gap-3">
-            <Button 
+            <Button
               variant="primary"
               onClick={() => window.open("/projects", "_blank")}
             >
               View Projects
             </Button>
-            <Button 
+
+            <Button
               variant="outline-light"
-              onClick={() => 
+              onClick={() =>
                 document
                   .getElementById("contact")
-                  ?.scrollIntoView({behavior: "smooth"})
+                  ?.scrollIntoView({ behavior: "smooth" })
               }
             >
               Contact Me
@@ -127,35 +131,42 @@ export default function Portfolio() {
       <section className="py-5 bg-secondary text-center" id="contact">
         <Container>
           <h2 className="fw-semibold mb-4">Contact Details</h2>
+
           <p className="mb-4">
             I’m open to junior developer roles, internships, and collaborations.
           </p>
-          <p className="mb-2">
+
+          <p className="mb-3">
             📧{" "}
-            <a className="text-light" href="mailto:your.email@example.com">
-              james.meneses112603@gmail.Computer
+            <a
+              href="mailto:james.meneses112603@gmail.com"
+              className="contact-link"
+            >
+              james.meneses112603@gmail.com
             </a>
           </p>
-          <p>
-            💻{" "}
+
+          <div className="d-flex justify-content-center align-items-center gap-4">
             <a
               href="https://github.com/DyamesGH"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-link"
+              className="contact-link d-flex align-items-center gap-2"
             >
+              <FaGithub size={20} color="#181717"/>
               GitHub
-            </a>{" "}
-            |{" "}
+            </a>
+
             <a
               href="https://linkedin.com/in/james-meneses03"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-link"
+              className="contact-link d-flex align-items-center gap-2"
             >
+              <FaLinkedin size={20} color="#0A66C2"/>
               LinkedIn
             </a>
-          </p>
+          </div>
         </Container>
       </section>
 

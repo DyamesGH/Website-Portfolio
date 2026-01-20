@@ -58,24 +58,27 @@ section {
   color: #888;
 }
 
-.contact-link,
-.contact-link:visited,
-.contact-link:active {
+
+
+a.contact-link,
+a.contact-link:link,
+a.contact-link:visited,
+a.contact-link:hover,
+a.contact-link:active,
+a.contact-link:focus {
   color: #ffffff !important;
   text-decoration: none !important;
 }
 
-/* Prevent Bootstrap hover color */
-.contact-link:hover {
-  color: #ffffff !important;
-}
-
-/* Underline animation */
-.contact-link {
+/* Underline ONLY on hover */
+a.contact-link {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.contact-link::after {
+a.contact-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -86,7 +89,22 @@ section {
   transition: width 0.25s ease-in-out;
 }
 
-.contact-link:hover::after {
+a.contact-link:hover::after {
   width: 100%;
 }
 
+
+
+a.contact-link .github-icon {
+  color: #181717 !important;
+}
+
+a.contact-link .linkedin-icon {
+  color: #0A66C2 !important;
+}
+
+/* Icon hover effect */
+a.contact-link:hover svg {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
