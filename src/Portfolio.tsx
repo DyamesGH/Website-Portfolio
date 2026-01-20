@@ -126,7 +126,7 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section className="py-5 bg-secondary text-center" id="contact">
         <Container>
-          <h2 className="fw-semibold mb-4">Contact</h2>
+          <h2 className="fw-semibold mb-4">Contact Details</h2>
           <p className="mb-4">
             I’m open to junior developer roles, internships, and collaborations.
           </p>
@@ -139,17 +139,19 @@ export default function Portfolio() {
           <p>
             💻{" "}
             <a
-              className="text-light"
               href="https://github.com/DyamesGH"
               target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
             >
               GitHub
             </a>{" "}
             |{" "}
             <a
-              className="text-light"
               href="https://linkedin.com/in/james-meneses03"
               target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
             >
               LinkedIn
             </a>
