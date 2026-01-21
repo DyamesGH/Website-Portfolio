@@ -1,5 +1,6 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import "./App.css";
 
 export default function Portfolio() {
   return (
@@ -133,7 +134,7 @@ export default function Portfolio() {
           <h2 className="fw-semibold mb-4">Contact Details</h2>
 
           <p className="mb-4">
-            I’m open to junior developer roles, internships, and collaborations.
+            I’m open to junior developer roles, and entry-level jobs.
           </p>
 
           <p className="mb-3">
