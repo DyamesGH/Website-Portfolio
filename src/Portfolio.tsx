@@ -151,9 +151,9 @@ export default function Portfolio() {
               href="https://github.com/DyamesGH"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-link d-flex align-items-center gap-2"
+              className="contact-link"
             >
-              <FaGithub size={20} color="#181717"/>
+              <FaGithub className="github-icon" size={20} />
               GitHub
             </a>
 
@@ -161,9 +161,9 @@ export default function Portfolio() {
               href="https://linkedin.com/in/james-meneses03"
               target="_blank"
               rel="noopener noreferrer"
-              className="contact-link d-flex align-items-center gap-2"
+              className="contact-link"
             >
-              <FaLinkedin size={20} color="#0A66C2"/>
+              <FaLinkedin className="linkedin-icon" size={20} />
               LinkedIn
             </a>
           </div>

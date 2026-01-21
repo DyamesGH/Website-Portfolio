@@ -9,76 +9,29 @@ body,
 html,
 body {
   overflow-x: hidden;
-  width: 100%;
 }
 
-section {
-  width: 100%;
+/* ============================= */
+/* CONTACT SECTION LINK STYLING */
+/* ============================= */
+
+#contact {
+  --bs-link-color: #ffffff;
+  --bs-link-hover-color: #ffffff;
 }
 
-/* Prevent container-fluid from exceeding viewport */
-.container-fluid {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
-
-a.contact-link,
-a.contact-link:link,
-a.contact-link:visited,
-a.contact-link:hover,
-a.contact-link:active,
-a.contact-link:focus {
-  color: #ffffff !important;
-  text-decoration: none !important;
-}
-
-/* Underline ONLY on hover */
-a.contact-link {
+/* Base link style */
+#contact a {
+  color: #ffffff;
+  text-decoration: none;
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-a.contact-link::after {
+/* Underline animation */
+#contact a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -89,22 +42,24 @@ a.contact-link::after {
   transition: width 0.25s ease-in-out;
 }
 
-a.contact-link:hover::after {
+#contact a:hover::after {
   width: 100%;
 }
 
+/* ============================= */
+/* ICON BRAND COLORS */
+/* ============================= */
 
-
-a.contact-link .github-icon {
-  color: #181717 !important;
+#contact .github-icon {
+  color: #181717; /* GitHub black */
 }
 
-a.contact-link .linkedin-icon {
-  color: #0A66C2 !important;
+#contact .linkedin-icon {
+  color: #0A66C2; /* LinkedIn blue */
 }
 
-/* Icon hover effect */
-a.contact-link:hover svg {
+/* Icon hover animation */
+#contact a:hover svg {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
