@@ -1,3 +1,18 @@
+import {
+  SiPython,
+  SiCplusplus,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiMysql,
+  SiGit,
+  SiBootstrap,
+  SiCanva,
+} from "react-icons/si";
+import { FaJava, FaMobileAlt, FaVideo } from "react-icons/fa";
+import { MdDesignServices, MdWeb } from "react-icons/md";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./App.css";
@@ -41,42 +56,35 @@ export default function Portfolio() {
       {/* Skills Section */}
       <section className="py-5 bg-secondary" id="skills">
         <Container>
-          <h2 className="text-center fw-semibold mb-5">Skills</h2>
+          <h2 className="text-center fw-semibold mb-4">Skills</h2>
 
-          <Row className="justify-content-center g-4">
-            <Col md={4}>
-              <Card bg="dark" text="light" className="h-100 text-center shadow">
-                <Card.Body>
-                  <Card.Title>Programming</Card.Title>
-                  <Card.Text>
-                    Java, C#, Python, TypeScript, JavaScript
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={4}>
-              <Card bg="dark" text="light" className="h-100 text-center shadow">
-                <Card.Body>
-                  <Card.Title>Frameworks & Tools</Card.Title>
-                  <Card.Text>
-                    React, Unity, Node.js, Git, GitHub
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={4}>
-              <Card bg="dark" text="light" className="h-100 text-center shadow">
-                <Card.Body>
-                  <Card.Title>Concepts</Card.Title>
-                  <Card.Text>
-                    OOP, Data Structures, Algorithms, Software Design
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+          <div className="skills-slider">
+            {[
+                { icon: <FaJava />, name: "Java", color: "java" },
+                { icon: <SiPython />, name: "Python", color: "python" },
+                { icon: <SiCplusplus />, name: "C++", color: "cpp" },
+                { icon: <SiHtml5 />, name: "HTML", color: "html" },
+                { icon: <SiCss3 />, name: "CSS", color: "css" },
+                { icon: <SiJavascript />, name: "JavaScript", color: "js" },
+                { icon: <SiTypescript />, name: "TypeScript", color: "ts" },
+                { icon: <SiReact />, name: "ReactJS", color: "react" },
+                { icon: <SiMysql />, name: "MySQL", color: "mysql" },
+                { icon: <SiGit />, name: "Git", color: "git" },
+                { icon: <SiBootstrap />, name: "Bootstrap", color: "bootstrap" },
+                { icon: <MdDesignServices />, name: "UX / UI Design", color: "design" },
+                { icon: <MdWeb />, name: "Web Design", color: "web" },
+                { icon: <FaMobileAlt />, name: "Mobile Dev", color: "mobile" },
+                { icon: <SiCanva />, name: "Canva", color: "canva" },
+                { icon: <FaVideo />, name: "Video Editing", color: "video" },
+            ].map((skill) => (
+              <div className="skill-card">
+                <div className={`skill-icon ${skill.color}`}>
+                  {skill.icon}
+                </div>
+                <span className="skill-name">{skill.name}</span>
+              </div>
+            ))}
+          </div>
         </Container>
       </section>
 

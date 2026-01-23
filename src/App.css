@@ -11,6 +11,88 @@ body {
   overflow-x: hidden;
 }
 
+
+/* ============================= */
+/* SKILLS HORIZONTAL SLIDER */
+/* ============================= */
+
+.skills-slider {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.skills-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.skills-slider::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+}
+
+.skill-card {
+  min-width: 120px;
+  background: #212529;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+
+/* ============================= */
+/* SKILL ICON BRAND COLORS */
+/* ============================= */
+
+.skill-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+/* Programming Languages */
+.skill-icon.java { color: #e76f00; }
+.skill-icon.python { color: #3776ab; }
+.skill-icon.cpp { color: #00599c; }
+
+/* Web */
+.skill-icon.html { color: #e34f26; }
+.skill-icon.css { color: #1572b6; }
+.skill-icon.js { color: #f7df1e; }
+.skill-icon.ts { color: #3178c6; }
+.skill-icon.react { color: #61dafb; }
+.skill-icon.design { color: #ff9800; }
+.skill-icon.web { color: #2196f3; }
+
+/* Tools */
+.skill-icon.mysql { color: #00758f; }
+.skill-icon.git { color: #f05032; }
+.skill-icon.bootstrap { color: #7952b3; }
+.skill-icon.canva { color: #00c4cc; }
+
+/* Others */
+.skill-icon.mobile { color: #4caf50; }
+.skill-icon.video { color: #ff0000; }
+
+
+
 /* ============================= */
 /* CONTACT SECTION LINK STYLING */
 /* ============================= */
