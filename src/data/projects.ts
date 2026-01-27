@@ -34,4 +34,11 @@ export const projects: Project[] = [
     technologies: ["Python", "API"],
     github: "https://github.com/DyamesGH/API-Weather-App",
   },
+  {
+    title: "Chatbot",
+    description:
+      "A ReactJS-based chatbot that handles predefined user queries and delivers instant responses through a structured question-answer flow.",
+    technologies: ["JavaScript", "ReactJS", "HTMLS", "CSS", "API"],
+    github: "https://github.com/DyamesGH/Simple-Chatbot",
+  },
 ];
