@@ -21,24 +21,35 @@ export default function Portfolio() {
   return (
     <div className="bg-dark text-light w-100">
       {/* Hero Section */}
-      <section className="py-5 bg-dark">
+      <section className="py-5 bg-dark hero">
         <Container className="text-center">
-          <h1 className="display-4 fw-bold mb-4">Hi, I’m James 👋</h1>
+          <h1 className="display-5 fw-bold mb-3">
+            Hi, I’m James 👋
+          </h1>
 
-          <p className="lead mx-auto mb-4" style={{ maxWidth: "700px" }}>
-            A fresh Computer Science graduate passionate about software
-            development, problem-solving, and building impactful digital
-            experiences.
+          <p className="lead mx-auto mb-3" style={{ maxWidth: "700px" }}>
+            A Computer Science graduate focused on building modern web and mobile
+            applications with clean design, solid performance, and real-world impact.
           </p>
 
-          <div className="d-flex justify-content-center gap-3">
+          <p className="text-secondary mb-4">
+            Fresh Graduate • Open to Junior Developer Roles
+          </p>
+
+          <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
+            {/* View Projects */}
             <Button
               variant="primary"
-              onClick={() => window.open("/projects", "_blank")}
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               View Projects
             </Button>
 
+            {/* Contact Me */}
             <Button
               variant="outline-light"
               onClick={() =>
@@ -48,6 +59,16 @@ export default function Portfolio() {
               }
             >
               Contact Me
+            </Button>
+
+            {/* Download Resume */}
+            <Button
+              variant="outline-primary"
+              href="/files/James Paulo Meneses Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
             </Button>
           </div>
         </Container>
@@ -88,25 +109,24 @@ export default function Portfolio() {
         </Container>
       </section>
 
-      {/* Projects Section */}
+      {/* Featured Projects Section */}
       <section className="py-5 bg-dark" id="projects">
         <Container>
-          <h2 className="text-center fw-semibold mb-5">Projects</h2>
+          <h2 className="text-center fw-semibold mb-5">Featured Projects</h2>
 
           <Row className="justify-content-center g-4">
             <Col md={6}>
               <Card bg="secondary" text="light" className="h-100 shadow">
                 <Card.Body>
-                  <Card.Title>Game Systems Architecture</Card.Title>
+                  <Card.Title>CondiPlant: Root Crop Disease Identification App</Card.Title>
                   <Card.Text className="mb-3">
-                    A Unity project implementing Dependency Injection, Service
-                    Locator, and Event-Driven architecture with scalability
-                    experiments using ECS.
+                    A mobile application designed to help farmers and agricultural professionals easily identify root crop diseases through image recognition powered by machine learning.
                   </Card.Text>
                   <Button
-                    variant="outline-light"
-                    href="https://github.com/your-username/project-1"
+                    variant="outline-primary"
+                    href="https://github.com/DJohnJomar/CondiPlant"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View on GitHub
                   </Button>
@@ -117,14 +137,13 @@ export default function Portfolio() {
             <Col md={6}>
               <Card bg="secondary" text="light" className="h-100 shadow">
                 <Card.Body>
-                  <Card.Title>Portfolio Website</Card.Title>
+                  <Card.Title>Ecommerce Website</Card.Title>
                   <Card.Text className="mb-3">
-                    A responsive personal portfolio built with React,
-                    TypeScript, and Bootstrap.
+                    A minimal e-commerce web application featuring product listings, intuitive navigation, and a clean, user-friendly interface designed for a smooth browsing experience.
                   </Card.Text>
                   <Button
                     variant="outline-light"
-                    href="https://github.com/your-username/project-2"
+                    href="https://github.com/DyamesGH/Ecommerce-Website"
                     target="_blank"
                   >
                     View on GitHub
@@ -181,7 +200,10 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="text-center py-3 bg-black text-secondary">
-        © {new Date().getFullYear()} James Meneses. All rights reserved.
+        <p className="mb-1">Let&apos;s build something together.</p>
+        <small>
+          © {new Date().getFullYear()} James Meneses. All rights reserved.
+        </small>
       </footer>
     </div>
   );
