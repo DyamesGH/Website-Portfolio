@@ -39,12 +39,8 @@ export default function Portfolio() {
           <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
             {/* View Projects */}
             <Button
-              variant="primary"
-              onClick={() =>
-                document
-                  .getElementById("projects")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              variant="primary" 
+              onClick={() => window.open("/projects", "_blank")}
             >
               View Projects
             </Button>
@@ -63,7 +59,7 @@ export default function Portfolio() {
 
             {/* Download Resume */}
             <Button
-              variant="outline-primary"
+              variant="outline-light"
               href="/files/James Paulo Meneses Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -123,7 +119,7 @@ export default function Portfolio() {
                     A mobile application designed to help farmers and agricultural professionals easily identify root crop diseases through image recognition powered by machine learning.
                   </Card.Text>
                   <Button
-                    variant="outline-primary"
+                    variant="outline-light"
                     href="https://github.com/DJohnJomar/CondiPlant"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -145,6 +141,7 @@ export default function Portfolio() {
                     variant="outline-light"
                     href="https://github.com/DyamesGH/Ecommerce-Website"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     View on GitHub
                   </Button>
