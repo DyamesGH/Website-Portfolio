@@ -1,14 +1,14 @@
 import { Container, Card, Badge, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../data/projects";
+import type { Project } from "../data/projects";
 
-export default function Projects() {
+const Projects: React.FC = () => {
   const navigate = useNavigate();
 
   return (
     <div className="bg-dark text-light min-vh-100 py-5">
       <Container>
-
         {/* Back Button */}
         <Button
           variant="outline-light"
@@ -20,7 +20,7 @@ export default function Projects() {
 
         <h1 className="text-center mb-5">My Projects</h1>
 
-        {projects.map((project, index) => (
+        {projects.map((project: Project, index: number) => (
           <Card
             key={index}
             bg="secondary"
@@ -33,7 +33,7 @@ export default function Projects() {
               <Card.Text>{project.description}</Card.Text>
 
               <div className="mb-3">
-                {project.technologies.map((tech, i) => (
+                {project.technologies.map((tech: string, i: number) => (
                   <Badge bg="dark" className="me-2" key={i}>
                     {tech}
                   </Badge>
@@ -44,6 +44,7 @@ export default function Projects() {
                 variant="outline-light"
                 href={project.github}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 View on GitHub
               </Button>
@@ -53,4 +54,6 @@ export default function Projects() {
       </Container>
     </div>
   );
-}
+};
+
+export default Projects;
