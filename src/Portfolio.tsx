@@ -84,7 +84,7 @@ const Portfolio: React.FC = () => {
 
             <Button
               variant="outline-light"
-              href="/files/James Paulo Meneses Resume.pdf"
+              href="/Website-Portfolio/files/James Paulo Meneses Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -168,11 +168,22 @@ const Portfolio: React.FC = () => {
           <p>📧 <a href="mailto:james.meneses112603@gmail.com">james.meneses112603@gmail.com</a></p>
 
           <div className="d-flex justify-content-center gap-4">
-            <a href="https://github.com/DyamesGH" target="_blank" rel="noreferrer">
-              <FaGithub size={20} /> GitHub
+            <a
+              href="https://github.com/DyamesGH"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link github"
+            >
+              <FaGithub size={20} className="github-icon" /> GitHub
             </a>
-            <a href="https://linkedin.com/in/james-meneses03" target="_blank" rel="noreferrer">
-              <FaLinkedin size={20} /> LinkedIn
+
+            <a
+              href="https://linkedin.com/in/james-meneses03"
+              target="_blank"
+              rel="noreferrer"
+              className="social-link linkedin"
+            >
+              <FaLinkedin size={20} className="linkedin-icon" /> LinkedIn
             </a>
           </div>
         </Container>
