@@ -84,7 +84,7 @@ const Portfolio: React.FC = () => {
 
             <Button
               variant="outline-light"
-              href="/Website-Portfolio/files/James Paulo Meneses Resume.pdf"
+              href="files/James_Paulo_Meneses_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
