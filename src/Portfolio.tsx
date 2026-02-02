@@ -63,7 +63,7 @@ const Portfolio: React.FC = () => {
             Fresh Graduate • Open to Junior Developer Roles
           </p>
 
-          <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
+          <div className="d-flex flex-column flex-md-row justify-content-center gap-3 hero-buttons">
             <Button
               variant="primary"
               onClick={() => navigate("/projects")}

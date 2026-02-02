@@ -167,5 +167,24 @@ body {
   transition: transform 0.2s ease;
 }
 
+/* ============================= */
+/* HERO BUTTONS (MOBILE FIX) */
+/* ============================= */
 
+.hero-buttons .btn {
+  width: 100%;
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+}
+
+.hero-buttons .btn-primary {
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.35);
+}
+
+@media (max-width: 576px) {
+  .hero-buttons .btn {
+    width: 220px;          /* 👈 set your preferred width */
+    align-self: center;    /* centers the buttons */
+  }
+}
 
