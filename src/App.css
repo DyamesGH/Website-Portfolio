@@ -188,3 +188,47 @@ body {
   }
 }
 
+/* ============================= */
+/* PROJECT CARDS */
+/* ============================= */
+
+.project-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Base image */
+.project-image {
+  width: 100%;
+  background-color: #1c1f23;
+  padding: 12px;
+}
+
+/* ----------------------------- */
+/* LANDSCAPE (web apps) */
+/* ----------------------------- */
+
+.project-image-cover {
+  height: 300px;          /* 👈 shorter, cinematic */
+  object-fit: cover;
+}
+
+/* ----------------------------- */
+/* PORTRAIT (mobile apps) */
+/* ----------------------------- */
+
+.project-image-contain {
+  height: 420px;          /* 👈 MUCH taller */
+  object-fit: contain;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .project-image-cover {
+    height: 200px;
+  }
+
+  .project-image-contain {
+    height: 340px;
+  }
+}
