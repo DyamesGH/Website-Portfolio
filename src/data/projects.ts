@@ -3,6 +3,8 @@ export interface Project {
   description: string;
   technologies: string[];
   github: string;
+  image: string;
+  imageFit?: "cover" | "contain"; // 👈 NEW
 }
 
 export const projects: Project[] = [
@@ -12,6 +14,8 @@ export const projects: Project[] = [
       "A mobile application designed to help farmers and agricultural professionals easily identify root crop diseases through image recognition powered by machine learning.",
     technologies: ["Java", "Python", "Android Studio", "SQLite", "Machine Learning"],
     github: "https://github.com/DJohnJomar/CondiPlant",
+    image: `${import.meta.env.BASE_URL}images/condiplant.jpg`,
+    imageFit: "contain", // 👈 portrait app
   },
   {
     title: "Ecommerce Website",
@@ -19,6 +23,8 @@ export const projects: Project[] = [
       "A minimal e-commerce web application featuring product listings, intuitive navigation, and a clean, user-friendly interface designed for a smooth browsing experience.",
     technologies: ["JavaScript", "TypeScript", "ReactJS", "Bootstrap", "HTML", "CSS"],
     github: "https://github.com/DyamesGH/Ecommerce-Website",
+    image: `${import.meta.env.BASE_URL}images/ecommerce1.png`,
+    imageFit: "cover",
   },
   {
     title: "File Management System Website",
@@ -26,6 +32,8 @@ export const projects: Project[] = [
       "A web-based file management system that allows users to upload and view documents, organized by date and barangay for easy access and retrieval.",
     technologies: ["JavaScript", "ReactJS", "Bootstrap", "HTML", "CSS"],
     github: "https://github.com/JE-Sales/dilg-fms-frontend",
+    image: `${import.meta.env.BASE_URL}images/dilg1.png`,
+    imageFit: "cover",
   },
   {
     title: "API Weather App",
@@ -33,12 +41,16 @@ export const projects: Project[] = [
       "A lightweight app that fetches and displays weather data for a city entered by the user using an external API.",
     technologies: ["Python", "API"],
     github: "https://github.com/DyamesGH/API-Weather-App",
+    image: `${import.meta.env.BASE_URL}images/weatherapp.png`,
+    imageFit: "contain", // 👈 portrait app
   },
   {
     title: "Chatbot",
     description:
       "A ReactJS-based chatbot that handles predefined user queries and delivers instant responses through a structured question-answer flow.",
-    technologies: ["JavaScript", "ReactJS", "HTMLS", "CSS", "API"],
+    technologies: ["JavaScript", "ReactJS", "HTML", "CSS", "API"],
     github: "https://github.com/DyamesGH/Simple-Chatbot",
+    image: `${import.meta.env.BASE_URL}images/chatbot.png`,
+    imageFit: "cover",
   },
 ];

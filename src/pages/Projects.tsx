@@ -9,7 +9,6 @@ const Projects: React.FC = () => {
   return (
     <div className="bg-dark text-light min-vh-100 py-5">
       <Container>
-        {/* Back Button */}
         <Button
           variant="outline-light"
           className="mb-4"
@@ -25,8 +24,19 @@ const Projects: React.FC = () => {
             key={index}
             bg="secondary"
             text="light"
-            className="mb-4 shadow"
+            className="mb-4 shadow project-card"
           >
+            <Card.Img
+              variant="top"
+              src={project.image}
+              alt={project.title}
+              className={`project-image ${
+                project.imageFit === "cover"
+                  ? "project-image-cover"
+                  : "project-image-contain"
+              }`}
+            />
+
             <Card.Body>
               <Card.Title>{project.title}</Card.Title>
 
