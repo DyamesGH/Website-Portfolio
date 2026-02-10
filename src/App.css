@@ -209,7 +209,7 @@ body {
 /* ----------------------------- */
 
 .project-image-cover {
-  height: 300px;          /* 👈 shorter, cinematic */
+  height: 580px;          /* 👈 shorter, cinematic */
   object-fit: cover;
 }
 
