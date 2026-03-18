@@ -7,12 +7,19 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
+  SiNodedotjs,
   SiMysql,
   SiGit,
   SiBootstrap,
   SiCanva,
 } from "react-icons/si";
-import { FaJava, FaMobileAlt, FaVideo, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaJava,
+  FaMobileAlt,
+  FaVideo,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import { MdDesignServices, MdWeb } from "react-icons/md";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -34,6 +41,7 @@ const skills: Skill[] = [
   { icon: <SiJavascript />, name: "JavaScript", color: "js" },
   { icon: <SiTypescript />, name: "TypeScript", color: "ts" },
   { icon: <SiReact />, name: "ReactJS", color: "react" },
+  { icon: <SiNodedotjs />, name: "Node.js", color: "node" },
   { icon: <SiMysql />, name: "MySQL", color: "mysql" },
   { icon: <SiGit />, name: "Git", color: "git" },
   { icon: <SiBootstrap />, name: "Bootstrap", color: "bootstrap" },
@@ -46,7 +54,7 @@ const skills: Skill[] = [
 
 const Portfolio: React.FC = () => {
   const navigate = useNavigate();
-  
+
   return (
     <div className="bg-dark text-light w-100">
       {/* Hero Section */}
@@ -55,8 +63,9 @@ const Portfolio: React.FC = () => {
           <h1 className="display-5 fw-bold mb-3">Hi, I’m James 👋</h1>
 
           <p className="lead mx-auto mb-3" style={{ maxWidth: 700 }}>
-            A Computer Science graduate focused on building modern web and mobile
-            applications with clean design, solid performance, and real-world impact.
+            A Computer Science graduate focused on building modern web and
+            mobile applications with clean design, solid performance, and
+            real-world impact.
           </p>
 
           <p className="text-secondary mb-4">
@@ -64,10 +73,7 @@ const Portfolio: React.FC = () => {
           </p>
 
           <div className="d-flex flex-column flex-md-row justify-content-center gap-3 hero-buttons">
-            <Button
-              variant="primary"
-              onClick={() => navigate("/projects")}
-            >
+            <Button variant="primary" onClick={() => navigate("/projects")}>
               View Projects
             </Button>
 
@@ -102,9 +108,7 @@ const Portfolio: React.FC = () => {
           <div className="skills-slider">
             {skills.map((skill, index) => (
               <div className="skill-card" key={index}>
-                <div className={`skill-icon ${skill.color}`}>
-                  {skill.icon}
-                </div>
+                <div className={`skill-icon ${skill.color}`}>{skill.icon}</div>
                 <span className="skill-name">{skill.name}</span>
               </div>
             ))}
@@ -144,7 +148,8 @@ const Portfolio: React.FC = () => {
                 <Card.Body>
                   <Card.Title>Ecommerce Website</Card.Title>
                   <Card.Text>
-                    Minimal e-commerce web app with clean UI and smooth navigation.
+                    Minimal e-commerce web app with clean UI and smooth
+                    navigation.
                   </Card.Text>
                   <Button
                     variant="outline-light"
@@ -165,7 +170,12 @@ const Portfolio: React.FC = () => {
         <Container>
           <h2 className="fw-semibold mb-4">Contact Details</h2>
 
-          <p>📧 <a href="mailto:james.meneses112603@gmail.com">james.meneses112603@gmail.com</a></p>
+          <p>
+            📧{" "}
+            <a href="mailto:james.meneses112603@gmail.com">
+              james.meneses112603@gmail.com
+            </a>
+          </p>
 
           <div className="d-flex justify-content-center gap-4">
             <a

@@ -99,6 +99,7 @@ body {
 .skill-icon.react { color: #61dafb; }
 .skill-icon.design { color: #ff9800; }
 .skill-icon.web { color: #2196f3; }
+.skill-icon.node { color: #68A063; }
 
 /* Tools */
 .skill-icon.mysql { color: #00758f; }
@@ -183,7 +184,7 @@ body {
 
 @media (max-width: 576px) {
   .hero-buttons .btn {
-    width: 220px;          /* 👈 set your preferred width */
+    width: 220px;          /* set your preferred width */
     align-self: center;    /* centers the buttons */
   }
 }
@@ -209,7 +210,7 @@ body {
 /* ----------------------------- */
 
 .project-image-cover {
-  height: 580px;          /* 👈 shorter, cinematic */
+  height: 580px;          /* shorter, cinematic */
   object-fit: cover;
 }
 
@@ -218,7 +219,7 @@ body {
 /* ----------------------------- */
 
 .project-image-contain {
-  height: 420px;          /* 👈 MUCH taller */
+  height: 420px;          /* MUCH taller */
   object-fit: contain;
 }
 
